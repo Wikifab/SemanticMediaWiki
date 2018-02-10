@@ -180,6 +180,8 @@ class Settings extends Options {
 			'smwgCategoryFeatures' => $GLOBALS['smwgCategoryFeatures'],
 			'smwgURITypeSchemeList' => $GLOBALS['smwgURITypeSchemeList'],
 			'smwgRuleTypes' => $GLOBALS['smwgRuleTypes'],
+			'smwgElasticsearchConfig' => $GLOBALS['smwgElasticsearchConfig'],
+			'smwgElasticsearchEndpoints' => $GLOBALS['smwgElasticsearchEndpoints'],
 		);
 
 		self::initLegacyMapping( $configuration );

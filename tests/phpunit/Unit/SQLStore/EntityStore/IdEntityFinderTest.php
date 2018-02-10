@@ -185,6 +185,8 @@ class IdEntityFinderTest extends \PHPUnit_Framework_TestCase {
 		$row->smw_namespace = 0;
 		$row->smw_iw = '';
 		$row->smw_subobject ='';
+		$row->smw_sortkey ='';
+		$row->smw_sort ='';
 
 		$this->connection->expects( $this->once() )
 			->method( 'select' )

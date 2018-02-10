@@ -176,6 +176,9 @@ class Search extends SearchEngine {
 
 			$store = ApplicationFactory::getInstance()->getStore();
 
+			// Sort by score/relevance if available
+			$query->setRelevanceOrder( 'desc' );
+
 			$result = $store->getQueryResult( $query );
 
 			$query->querymode = SMWQuery::MODE_COUNT;

@@ -20,6 +20,7 @@ class_alias( \SMW\Connection\ConnectionProvider::class, 'SMW\DBConnectionProvide
 class_alias( \SMW\DataValues\TypesValue::class, 'SMWTypesValue' );
 class_alias( \SMW\DataValues\PropertyValue::class, 'SMWPropertyValue' );
 
+
 // 1.9.
 class_alias( \SMW\Store::class, 'SMWStore' );
 class_alias( \SMW\MediaWiki\Jobs\UpdateJob::class, 'SMWUpdateJob' );
@@ -92,3 +93,6 @@ class_alias( \SMW\ParserFunctions\SubobjectParserFunction::class, 'SMW\Subobject
 class_alias( \SMW\ParserFunctions\RecurringEventsParserFunction::class, 'SMW\RecurringEventsParserFunction' );
 class_alias( \SMW\SQLStore\PropertyTableDefinition::class, 'SMW\SQLStore\TableDefinition' );
 class_alias( \SMW\DataModel\ContainerSemanticData::class, 'SMWContainerSemanticData' );
+
+// 3.0 (late alias definition)
+class_alias( \SMW\Elastic\ElasticStore::class, 'SMWElasticStore' );
