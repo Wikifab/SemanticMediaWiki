@@ -99,7 +99,7 @@ class ShowParserFunctionTest extends \PHPUnit_Framework_TestCase {
 		$result = $instance->parse( $params );
 
 		if ( $expected['output'] === '' ) {
-			$this->assertEmpty( $result );
+			$this->assertEmpty( $result, "Actual result: \"$result\"\n" );
 		} else {
 			$this->assertContains( $expected['output'], $result );
 		}
