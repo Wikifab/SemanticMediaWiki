@@ -142,6 +142,16 @@ class LinksProcessor {
 
 		if ( array_key_exists( 1, $semanticLink ) ) {
 
+			// case like [[PropertyName::==title== ... ]]
+			// in that case, ':=' is interpreted as link separator, whereas it should be '::'
+			// so if that case occur, remove ':' from name of link, and place back the missing '=')
+			if(substr($semanticLink[1], -1) == ':') {
+				if (substr($semanticLink[0], strpos($semanticLink[0], $semanticLink[1]) + strlen($semanticLink[1]),2) == ':=') {
+					$semanticLink[1] =  substr($semanticLink[1], 0, strlen($semanticLink[1])-1);
+					$semanticLink[2] = '=' . $semanticLink[2];
+				}
+			}
+
 			// #1252 Strict mode being disabled for support of multi property
 			// assignments (e.g. [[property1::property2::value]])
 
